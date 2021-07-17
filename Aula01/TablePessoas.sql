@@ -1,16 +1,8 @@
-create database cadastro
-default character set utf8
-default collate utf8_general_ci;
-
-use cadastro;
-
-CREATE TABLE pessoas (
-    id INT NOT NULL AUTO_INCREMENT,
-    nome VARCHAR(30) NOT NULL,
-    nascimento DATE,
-    sexo ENUM('M', 'F'),
-    peso DECIMAL(5 , 2 ),
-    altura DECIMAL(3 , 2 ),
-    nacionalidade VARCHAR(20) DEFAULT 'Brasil',
-    primary key (id)
-)  DEFAULT CHARSET=UTF8;
+insert into pessoas
+(nome, nascimento, sexo, peso, altura, nacionalidade)
+values
+('Godofredo', '1984-01-02', 'M', '78.5', '1.83', 'Brasil'),
+('Ellen', '1988-04-04', 'F', '65.5', '1.60', 'Brasil'),
+('David', '1987-06-30', 'M', '97.5', '1.80', 'Brasil');
+ 
+select * from pessoas;
